@@ -1,9 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+backend/data/*
+
 # dependencies
 /frontend/node_modules
 /.pnp
 .pnp.js
+
 /frontend/package-lock.json
 /frontend/package.json
 
