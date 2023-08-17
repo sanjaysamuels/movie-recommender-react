@@ -10,6 +10,8 @@ backend/data/*
 /frontend/package-lock.json
 /frontend/package.json
 
+/backend/config.py
+
 # testing
 /coverage
 

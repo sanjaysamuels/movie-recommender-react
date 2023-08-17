@@ -1,6 +1,15 @@
 version: '3'
 
 services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/user/src/app
+    ports:
+      - 4000:4000
+    restart: always
+    tty: true
+
   frontend:
     build: ./frontend
     volumes:
@@ -10,10 +19,16 @@ services:
     depends_on:
       - backend
 
-  backend:
-    build: ./backend
+  proxy:
+    build: 
+      ./proxy
     volumes:
-      - ./backend:/user/src/app
+      - ./proxy:/user/src/app
     ports:
-      - 4000:4000
-    restart: always
+      - "80:80"
+    restart: 
+      always
+    depends_on:
+      - backend
+      - frontend
+  
