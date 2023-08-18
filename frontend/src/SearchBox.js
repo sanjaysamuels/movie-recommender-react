@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './App.css';
 
 function SearchBox({onSearch}) {
     const [searchText, setSearchText] = useState("");
@@ -10,11 +11,19 @@ function SearchBox({onSearch}) {
     }
 
     return (
-    <div className="search-box">
-        <input type="text" value={searchText} onChange={(e) => setSearchText(e.target.value)} placeholder="Enter a movie!"/>
-        <button onClick={handleSearch}>Search</button>
-    </div>
-        );
+        <div className="search-container">
+            <input
+                type="text"
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
+                placeholder="Enter the name of a movie, and we will recommend you related movies!"
+                className="search-input"
+            />
+            <button onClick={handleSearch} className="search-button">
+                Search
+            </button>
+        </div>
+    );
 
 }
 

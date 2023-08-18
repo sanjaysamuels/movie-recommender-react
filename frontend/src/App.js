@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Movie Recommendation</h1>
+      <h1>Movie Recommendation ML</h1>
       <SearchBox onSearch={searchMovies}/>
     <MovieList movies={movies}/>
     </div>

@@ -15,33 +15,35 @@ h1 {
 }
 
 /* Styling for the search box */
-.search-box {
+.search-container {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 20px;
-  align-items:center ;
+  margin-top: 20px;
 }
 
-/* Styling for the search input */
-.search-box input {
-  width: 300px;
-  height: 30px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 5px;
+.search-input {
+  padding: 10px;
   font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 70%; /* Adjust as needed */
 }
 
-/* Styling for the search button */
-.search-box button {
-  width: 100px;
-  height: 30px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-left: 10px;
+.search-button {
+  padding: 10px 15px;
   font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.search-button:hover {
+  background-color: #0056b3;
 }
 
 /* Styling for the movie list */
@@ -55,4 +57,18 @@ h1 {
   text-align: center;
   font-size: 20px;
   margin: 20px;
+}
+
+
+.App {
+  background-color: #3f527f; /* Set your desired background color */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  color: #74a3a9; /* Set your desired text color */
+  font-size: 50px;
 }
